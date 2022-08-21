@@ -7,17 +7,17 @@ const ingredients = [
   'Condiments',
 ];
 
-const ingredientListAl = document.querySelector('#ingredients');
-console.log("ingredientListAl", ingredientListAl);
-  
-const ingredientItemAl = document.createElement('li');
-ingredientItemAl.classList.add('item'); 
+const ingredientListAl = document.querySelector('ul');
+const elements = [];
 
-ingredientItemAl.textContent = 'Potatoes';
-console.log(ingredientItemAl);
-// Напиши скрипт, который для каждого элемента массива ingredients:
+for (let i = 0; i < ingredients.length; i += 1) {
+  const ingredient = ingredients[i];
 
-// Создаст отдельный элемент <li>. Обзательно используй метод document.createElement().
-// Добавит название ингредиента как его текстовое содержимое.
-// Добавит элементу класс item.
-// После чего вставит все <li> за одну операцию в список ul#ingredients.
+  const ingredientItemAl = document.createElement('li');
+  ingredientItemAl.textContent = ingredient;
+  ingredientItemAl.classList.add('item'); 
+
+  elements.push(ingredientItemAl);
+}
+
+ingredientListAl.append(...elements);
