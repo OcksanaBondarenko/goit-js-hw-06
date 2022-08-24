@@ -13,7 +13,7 @@ const images = [
   },
 ];
 
-const gallaryEl = document.querySelector(".gallery");
+const galleryEl = document.querySelector(".gallery");
 
 galleryEl.style.display = "flex";
 galleryEl.style.flexWrap = "wrap";
